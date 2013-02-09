@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Inchoo
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Please do not edit or add to this file if you wish to upgrade
+ * Magento or this extension to newer versions in the future.
+ * Inchoo developers (Inchooer's) give their best to conform to
+ * "non-obtrusive, best Magento practices" style of coding.
+ * However, Inchoo does not guarantee functional accuracy of
+ * specific extension behavior. Additionally we take no responsibility
+ * for any possible issue(s) resulting from extension usage.
+ * We reserve the full right not to provide any kind of support for our free extensions.
+ * Thank you for your understanding.
+ *
+ * @category    Inchoo
+ * @package     Inchoo_LoginAsCustomer
+ * @author      Branko Ajzele <ajzele@gmail.com>
+ * @copyright   Copyright (c) Inchoo (http://inchoo.net/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Inchoo_LoginAsCustomer>
+            <version>1.0.0.0.0.0</version>
+        </Inchoo_LoginAsCustomer>
+    </modules>
+    <global>
+        <models>
+            <inchoo_loginAsCustomer>
+                <class>Inchoo_LoginAsCustomer_Model</class>
+            </inchoo_loginAsCustomer>
+        </models>
+        <blocks>
+            <inchoo_loginAsCustomer>
+                <class>Inchoo_LoginAsCustomer_Block</class>
+            </inchoo_loginAsCustomer>
+        </blocks>
+        <helpers>
+            <inchoo_loginAsCustomer>
+                <class>Inchoo_LoginAsCustomer_Helper</class>
+            </inchoo_loginAsCustomer>
+        </helpers>
+    </global>
+
+    <adminhtml>
+        <events>
+            <adminhtml_widget_container_html_before>
+                <observers>
+                    <inchoo_loginAsCustomer_injectLoginAsCustomerButton>
+                        <class>inchoo_loginAsCustomer/observer</class>
+                        <method>injectLoginAsCustomerButton</method>
+                    </inchoo_loginAsCustomer_injectLoginAsCustomerButton>
+                </observers>
+            </adminhtml_widget_container_html_before>
+        </events>
+    </adminhtml>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Inchoo_LoginAsCustomer before="Mage_Adminhtml">Inchoo_LoginAsCustomer_Adminhtml</Inchoo_LoginAsCustomer>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+        <secure_url>
+            <inchoo_loginAsCustomer_customer>/moneybookers/processing</inchoo_loginAsCustomer_customer>
+        </secure_url>
+        <routers>
+            <inchoo_loginAsCustomer>
+                <use>standard</use>
+                <args>
+                    <module>Inchoo_LoginAsCustomer</module>
+                    <frontName>inchoo_loginAsCustomer</frontName>
+                </args>
+            </inchoo_loginAsCustomer>
+        </routers>
+    </frontend>
+    <default>
+        <inchoo_loginAsCustomer>
+            <settings>
+                <active><![CDATA[0]]></active>
+            </settings>
+        </inchoo_loginAsCustomer>
+    </default>
+</config>
