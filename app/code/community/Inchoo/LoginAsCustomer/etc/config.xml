@@ -81,9 +81,6 @@
         </routers>
     </admin>
     <frontend>
-        <secure_url>
-            <inchoo_loginAsCustomer_customer>/moneybookers/processing</inchoo_loginAsCustomer_customer>
-        </secure_url>
         <routers>
             <inchoo_loginAsCustomer>
                 <use>standard</use>
