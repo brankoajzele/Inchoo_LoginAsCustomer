@@ -30,7 +30,7 @@ class Inchoo_LoginAsCustomer_CustomerController extends Mage_Core_Controller_Fro
                     }
                 }
 
-		/* Logout any currently logged in customer */
+                /* Logout any currently logged in customer */
                 if ($customerSession->isLoggedIn()) {
                     $customerSession->logout();
                     $this->_redirectUrl($this->getRequest()->getRequestUri());
