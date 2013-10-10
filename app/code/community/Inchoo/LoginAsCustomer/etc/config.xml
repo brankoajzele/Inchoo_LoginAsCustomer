@@ -67,6 +67,16 @@
                 </observers>
             </adminhtml_widget_container_html_before>
         </events>
+        <translate>
+            <modules>
+                <inchoo_loginascustomer>
+                    <files>
+                        <default>Inchoo_LoginAsCustomer.csv</default>
+                    </files>
+                </inchoo_loginascustomer>
+            </modules>
+        </translate>
+
     </adminhtml>
 
     <admin>

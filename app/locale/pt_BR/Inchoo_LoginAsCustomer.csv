@@ -1,0 +1,5 @@
+"Login as Customer","Logar como Cliente"
+"Login as customer %s (choose a website to log into)","Logar como cliente %s (escolha um website para fazer login)"
+"Website Name","Nome do website"
+"Edit Website","Editar Website"
+"<i>Share Customer Accounts</i> option is set to <i>Per Website</i>. You are trying to login as customer from website %d into website %s. This action is not allowed.","A opção <i>Compartilhar Conta de Clientes</i> está configurada para <i>Por Website</i>. Você está tentando logar como cliente a partir do website %d dentro website %s. Esta ação não é permitida."
