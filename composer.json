@@ -1,0 +1,9 @@
+{
+   "name": "inchoo/loginascustomer",
+   "type": "magento-module",
+   "description": "login as customer from backend",
+   "homepage": "https://github.com/ajzele/Inchoo_LoginAsCustomer",
+   "require": {
+      "magento-hackathon/magento-composer-installer": "*"
+   }
+}

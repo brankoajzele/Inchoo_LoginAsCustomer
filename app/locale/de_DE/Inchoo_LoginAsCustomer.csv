@@ -1,0 +1,5 @@
+"Login as Customer","Als Kunde anmelden"
+"Login as customer %s (choose a website to log into)","Als Kunde anmelden (wählen Sie eine Webseite, in der Sie sich anmelden wollen)"
+"Website Name","Webseite Name"
+"Edit Website","Bearbeite Webseite"
+"<i>Share Customer Accounts</i> option is set to <i>Per Website</i>. You are trying to login as customer from website %d into website %s. This action is not allowed.","<i>Kundenkonten verteilen</i> ist eingestellt auf <i>pro Webseite</i>. Sie versuchen sich von der Webseite %d auf der Website %s anzumelden. Dieses ist leider nicht möglich."
