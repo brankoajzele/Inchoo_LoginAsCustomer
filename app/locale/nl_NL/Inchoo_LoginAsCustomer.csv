@@ -1,0 +1,5 @@
+"Login as Customer","Inloggen als klant"
+"Login as customer %s (choose a website to log into)","Inloggen als klant %s (kies website om op in te loggen)"
+"Website Name","Websitenaam"
+"Edit Website","Wijzig website"
+"<i>Share Customer Accounts</i> option is set to <i>Per Website</i>. You are trying to login as customer from website %d into website %s. This action is not allowed.","<i>Deel klantaccount</i>-optie is ingesteld op 'Per Website'. U probeert in te loggen als klant vanaf de website %d op website %s. Deze actie is niet toegestaan."
