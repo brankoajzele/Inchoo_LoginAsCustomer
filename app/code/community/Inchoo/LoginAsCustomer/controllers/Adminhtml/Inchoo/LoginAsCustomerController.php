@@ -56,4 +56,9 @@ class Inchoo_LoginAsCustomer_Adminhtml_Inchoo_LoginAsCustomerController extends 
 
         $this->_redirectUrl(Mage::app()->getWebsite($this->getRequest()->getParam('website_id'))->getConfig('web/unsecure/base_url').'index.php/inchoo_loginAsCustomer/customer/login?loginAsCustomer='.base64_encode($info));
     }
+    
+    protected function _isAllowed()
+    {
+        return true;
+    }
 }
