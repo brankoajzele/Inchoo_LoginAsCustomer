@@ -32,6 +32,12 @@
  */
 class Inchoo_LoginAsCustomer_Adminhtml_Inchoo_LoginAsCustomerController extends Mage_Adminhtml_Controller_Action
 {
+    
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isLoggedIn();
+    }
+    
     public function indexAction()
     {
         $this->loadLayout()->_setActiveMenu('sales/inchoo_loginAsCustomer');
