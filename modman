@@ -1,0 +1,4 @@
+app/etc/modules/Inchoo_LoginAsCustomer.xml                                app/etc/modules/Inchoo_LoginAsCustomer.xml
+app/code/community/Inchoo/LoginAsCustomer/                                app/code/community/Inchoo/LoginAsCustomer/
+app/locale/pt_BR/Inchoo_LoginAsCustomer.csv                               app/locale/pt_BR/Inchoo_LoginAsCustomer.csv
+app/locale/de_DE/Inchoo_LoginAsCustomer.csv                               app/locale/de_DE/Inchoo_LoginAsCustomer.csv

@@ -32,6 +32,12 @@
  */
 class Inchoo_LoginAsCustomer_Adminhtml_Inchoo_LoginAsCustomerController extends Mage_Adminhtml_Controller_Action
 {
+    
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isLoggedIn();
+    }
+    
     public function indexAction()
     {
         $this->loadLayout()->_setActiveMenu('sales/inchoo_loginAsCustomer');
@@ -49,11 +55,20 @@ class Inchoo_LoginAsCustomer_Adminhtml_Inchoo_LoginAsCustomerController extends 
     public function loginAction()
     {
         $info = Mage::helper('core')->encrypt(serialize(array(
-            'website_id' => $this->getRequest()->getParam('website_id'),
-            'customer_id' => $this->getRequest()->getParam('customer_id'),
-            'timestamp' => time(),
-        )));
+                    'website_id' => $this->getRequest()->getParam('website_id'),
+                    'customer_id' => $this->getRequest()->getParam('customer_id'),
+                    'timestamp' => time(),
+                )));
 
-        $this->_redirectUrl(Mage::app()->getWebsite($this->getRequest()->getParam('website_id'))->getConfig('web/unsecure/base_url').'index.php/inchoo_loginAsCustomer/customer/login?loginAsCustomer='.base64_encode($info));
+        $store = Mage::app()->getWebsite($this->getRequest()->getParam('website_id'))->getDefaultStore();
+
+        $args = array(
+            'loginAsCustomer' => base64_encode($info),
+            '_store'          => $store,
+        );
+
+        $url = Mage::getModel('core/url')->getUrl('inchoo_loginAsCustomer/customer/login', $args);
+
+        $this->_redirectUrl($url);
     }
 }
